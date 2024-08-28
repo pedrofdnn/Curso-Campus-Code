@@ -115,4 +115,73 @@ else
 end 
 # OBS: 1..4 estamos orientando que nota seja comparada a todos os valores entre 1 e 4.
 
+# While - é uma estrutura de repetição que reproduz um trecho de código enquanto uma determinada condição é satisfeita. 
+#Ex1:
 
+# tecla_pressionada = 'n'
+# while tecla_pressionada != 's' do
+#   puts 'Vou continuar imprimindo até você apertar s'
+
+#   tecla_pressionada = gets().chomp() #chomp come o enter do final do gets
+# end
+
+# OBS: No código acima nosso programa vai imprimir a frase 'Vou continuar imprimindo até você apertar s' até a tecla s ser pressionada.
+
+# Ex2:  
+
+# condicao = 1
+# while condicao == 1 do  
+#   puts 'A condição está sendo satisfeita'
+# end
+
+# Lembre-se que pode abortar a execução com Ctrl + c
+# OBS: A situação apresentada acima não resulta em erro, mas o computador ficará infinitamente rodando o código dentro do while, afinal, a condição sempre será satisfeita. É importante garantir que podemos sair do while, senão acabamos por criar o famoso Loop Infinito. Para garantir que temos uma forma de sair, podemos criar uma nova opção de saída e utilizá-la no loop:
+condicao = 1
+while condicao == 1 do  
+  puts 'A condição está sendo satisfeita'
+  condicao = 2
+end
+
+#Ex3: 
+
+# tecla_pressionada = 's'
+# alunos = []
+# while tecla_pressionada == 's' do
+#   puts 'Digite o nome do aluno: '
+#   nome_aluno = gets.chomp
+#   alunos << nome_aluno
+
+#   puts 'Deseja inserir um novo aluno? s ou n'
+#   tecla_pressionada = gets.chomp
+# end
+
+# OBS: Essa função faz um loop e armazena os dados inseridos a cada loop. quando encerrada e possivel checar 
+
+# For - Estrutura de repetição: para realizar uma das formas em ruby e utilizar a função "each" com ela e possivel percorrer o bloco de codigo. 
+ 
+# Ex:
+# alunos.each do |um_aluno|
+#   puts(um_aluno[:nome])
+# end
+
+# OBS: Com o uso do each vimos um novo elemento do Ruby em ação: os blocos. Todo código presente entre o do e o end representa um bloco e esse bloco é usado como parâmetro para o each. De forma simples e prática: se temos 10 itens no array de alunos, o código do bloco vai ser executado 10 vezes e a cada execução teremos um dos 10 itens na variável um_aluno.
+
+# Metodos: é usada para definir um método. Um método é um conjunto de instruções que você pode chamar pelo nome para executar uma tarefa específica.
+# Ex: 
+
+def nome_do_metodo() #os parênteses são opcionais
+  puts 'Que método legal!'
+  # mais linhas de código
+end
+# chamada
+nome_do_metodo() # método é executado neste momento 
+# imprime na tela a texto “Que método legal!”
+
+# Tipos de Métodos com parâmetro e retorno
+# Em Ruby (e quase todas as outras linguagens), os métodos podem ter parâmetros. Isso quer dizer que você pode passar variáveis, valores ou objetos para o método executar e processar internamente.
+
+# Ex: No exemplo abaixo, declaramos um método que recebe dois valores e depois irá fazer a soma.
+def soma_valores(valor1, valor2) #os parênteses são opcionais
+  return valor1 + valor2
+end
+soma_valores(10, 20) #somamos 10 com 20, retorna 30

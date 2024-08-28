@@ -57,3 +57,25 @@ else
 end 
 
  
+# While
+
+#  alunos = []
+
+# tecla_pressionada = 's'
+
+# while tecla_pressionada == 's' do
+#   puts 'Digite o nome do aluno: '
+#   nome_aluno = gets.chomp
+
+#   puts 'Digite a nota do aluno: '
+#   nota_aluno = gets.to_i
+
+#   puts 'Digite a matéria: '
+#   materia_aluno = gets.chomp
+
+#   # Adiciona o aluno como um hash ao array alunos
+#   alunos << { nome: nome_aluno, nota: nota_aluno, materia: materia_aluno }
+
+#   puts 'Deseja inserir um novo aluno? s ou n'
+#   tecla_pressionada = gets.chomp
+# end
