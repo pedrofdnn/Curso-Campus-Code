@@ -7,6 +7,13 @@ puts "Mundo"
 puts('Hello')
 puts 120
 
+print " PRINT - o print serve para imprimir ao lado do texto."
+puts
+
+# Constantes.
+SOU_UMA_CONSTANTE = "Sou uma Constante. "
+puts(SOU_UMA_CONSTANTE)
+
 # length — É usado para contar a quantidades de caracteres.
 puts( 'Campus Code'.length() )
 # => 11  resultado
@@ -185,3 +192,17 @@ def soma_valores(valor1, valor2) #os parênteses são opcionais
   return valor1 + valor2
 end
 soma_valores(10, 20) #somamos 10 com 20, retorna 30
+
+# Loop condicional.
+# Ex:
+
+condicao = 1
+loop do
+  if condicao == 1
+    puts "Sou um loop infinito"
+    break
+  else
+    # Outras ações podem ser adicionadas aqui
+  end
+end
+
