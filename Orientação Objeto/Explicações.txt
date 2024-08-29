@@ -1,0 +1,27 @@
+============================= Criar mais objetos.
+
+Na classe, podemos definir um conjunto de atributos que serão utilizados em todos os seus objetos. Os atributos são como variáveis amarradas a cada objeto e na classe devemos definir seu nome e, em linguagens fortemente tipadas, o seu tipo de dado. Um aluno pode ter uma string nome, outra string telefone e um inteiro número de matrícula, por exemplo.
+
+Em Ruby, os atributos são definidos durante a criação dos objetos, ou seja, na execução do método new. Esse método é especial no Ruby – para alterar seu comportamento padrão devemos criar um método initialize na classe. Chamamos esse método de construtor, pois ele é usado na construção de cada objeto.
+
+Utilizamos a notação @variavel para declarar os atributos dos objetos Aluno que serão gerados. Podemos dizer então que atributos são variáveis relacionadas a uma instância da classe.
+
+class Aluno
+  def initialize(nome, telefone, matricula)
+    @nome = nome
+    @telefone = telefone
+    @matricula = matricula
+  end
+end
+
+Se você tentar criar objetos de Aluno novamente vai ter problemas, afinal agora cada objeto precisa de 3 parâmetros para ser criado.
+
+jose = Aluno.new
+ArgumentError (wrong number of arguments (given 0, expected 3))
+
+Para criar os objetos, veja o exemplo a seguir:
+
+ana = Aluno.new('Ana', '99 9999-9999', 1234)
+ => #<Aluno:0x00007fd3f28b4d18 @nome="Ana", @telefone="99 9999-9999", @matricula=1234>
+
+Obs: A partir do momento que criamos os atributos usando os métodos attr_reader, attr_writer e attr_accessor, o uso direto das variáveis iniciadas com @ passa a ser desencorajado. A boa prática é sempre usar os métodos para obter e atribuir valores.
